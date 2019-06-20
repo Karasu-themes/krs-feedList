@@ -18,7 +18,7 @@ var FeedList = function () {
 		    CALLBACK_NAME = 'feedLists',
 		    CONFIG = {
 			selector: document.getElementById('krs-feedLists'), //selector html dónde se incrustarán los datos
-			home_url: window.location.protocol + '//' + window.location.hostname, //URL principal
+			home_url: window.location.protocol + '//' + window.location.hostname, //URL principal sin el slash final
 			label: '', //Etiqueta
 			thumbnail: 's200-c', //tamaño imagenes
 			length: 4, //Total de entradas a mostrar
@@ -33,7 +33,7 @@ var FeedList = function () {
 		    itemLength = option.length ? '&max-results=' + option.length : "&max-results=6";
 
 		// insertamos en el body el script
-		var $fetchURL = option.home_url + 'feeds/posts/default' + label + '?alt=json-in-script&callback=' + CALLBACK_NAME + itemLength;
+		var $fetchURL = option.home_url + '/feeds/posts/default' + label + '?alt=json-in-script&callback=' + CALLBACK_NAME + itemLength;
 		BODY.appendChild(this.script($fetchURL));
 
 		// agregamos el loader

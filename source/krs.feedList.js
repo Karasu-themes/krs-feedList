@@ -8,14 +8,13 @@ class FeedList {
 			CALLBACK_NAME = 'feedLists',
 			CONFIG = {
 				selector: document.getElementById('krs-feedLists'), //selector html dónde se incrustarán los datos
-				home_url: window.location.protocol + '//' + window.location.hostname, //URL principal sin el slash final
+				home_url: window.location.protocol + '//' + window.location.hostname, //URL principal (no usar slash final)
 				label: '', //Etiqueta
 				thumbnail: 's200-c', //tamaño imagenes
 				length: 4, //Total de entradas a mostrar
 				render: 'default', //estructura html de los items,
 				loader: this.loader(), //Estructura de cargando
 				summary:  64,  //Cantidad de texto a mostrar en el resumen
-				callback: ''
 			}
 
 			// Variables
@@ -123,11 +122,9 @@ class FeedList {
 	renderManagementItem(mode){
 		switch (mode) {
 			case 'default':
-				console.log(typeof mode)
 				return this.renderItems();
 				break;
 			case 'overlay':
-				console.log(typeof mode)
 				return this.renderItemsOverlay();
 				break;
 			default:
@@ -210,10 +207,6 @@ class FeedList {
 			}
 		}
 		return source;
-	}
-
-	debug(){
-
 	}
 
 }

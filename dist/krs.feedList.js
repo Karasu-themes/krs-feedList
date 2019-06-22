@@ -6,7 +6,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-/*! krs-feedList.js v1.0 - karasu themes©2019 | MIT License */
+/*! krs-feedList.js v1.1 - karasu themes©2019 | MIT License */
 
 var FeedList = function () {
 	function FeedList(userOption) {

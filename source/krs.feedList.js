@@ -1,4 +1,4 @@
-/*! krs-feedList.js v1.0 - karasu themes©2019 | MIT License */
+/*! krs-feedList.js v1.1 - karasu themes©2019 | MIT License */
 
 class FeedList {
 	constructor (userOption) {
